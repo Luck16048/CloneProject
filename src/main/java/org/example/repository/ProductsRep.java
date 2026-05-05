@@ -35,8 +35,8 @@ public class ProductsRep {
     public void deleteById(int id) throws SQLException {
         DSLContext dsl = ConnectDb.getDSL();
 
-        dsl.deleteFrom(table("products")
-                        .where(field("id").eq(id)))
+        dsl.deleteFrom(table("products"))
+                .where(field("id").eq(id))
                 .execute();
     }
 
@@ -49,7 +49,7 @@ public class ProductsRep {
                         field("status"))
                 .values(pe.getName(),
                         pe.getNumber(),
-                        pe.getStatus())
+                        pe.getStatus().name())
                 .execute();
     }
 

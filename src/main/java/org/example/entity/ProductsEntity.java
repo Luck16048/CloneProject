@@ -6,31 +6,35 @@ public class ProductsEntity {
     private int number;
     private StatusEnum status;
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getNumber(){
+    public int getNumber() {
         return number;
     }
-    public void setNumber(int number){
+
+    public void setNumber(int number) {
         this.number = number;
     }
 
-    public StatusEnum getStatus(){
+    public StatusEnum getStatus() {
         return status;
     }
-    public void setStatus(StatusEnum status){
+
+    public void setStatus(StatusEnum status) {
         this.status = status;
     }
 }
