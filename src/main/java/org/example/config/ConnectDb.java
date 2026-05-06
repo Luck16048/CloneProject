@@ -11,13 +11,13 @@ import java.sql.DriverManager;
 public class ConnectDb {
     private static final String URL = System.getenv("URL");
     private static final String USERNAME = System.getenv("USERNAME");
-    private static final String PASSWORD =  System.getenv("PASSWORD");
+    private static final String PASSWORD = System.getenv("PASSWORD");
 
-    public static Connection getConnection() throws SQLException{
+    public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
 
-    public static DSLContext getDSL() throws SQLException{
+    public static DSLContext getDSL() throws SQLException {
         Connection conn = getConnection();
         return DSL.using(conn, SQLDialect.MYSQL);
     }

@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Number: " + findId.getNumber());
         System.out.println("Status: " + findId.getStatus());
 
-        service.deleteById(4);
+        service.deleteById(11);
 
         CacheProducts ch = new CacheProducts();
         ch.saveCache(pe);
